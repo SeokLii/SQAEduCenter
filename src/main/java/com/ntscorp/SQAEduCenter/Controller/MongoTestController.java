@@ -1,5 +1,6 @@
-package com.ntscorp.SQAEduCenter;
+package com.ntscorp.SQAEduCenter.Controller;
 
+import com.ntscorp.SQAEduCenter.Service.MongoTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

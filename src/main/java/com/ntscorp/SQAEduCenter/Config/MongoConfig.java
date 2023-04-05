@@ -1,4 +1,4 @@
-package com.ntscorp.SQAEduCenter;
+package com.ntscorp.SQAEduCenter.Config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

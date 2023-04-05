@@ -1,7 +1,9 @@
-package com.ntscorp.SQAEduCenter;
+package com.ntscorp.SQAEduCenter.Service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ntscorp.SQAEduCenter.Model.MongoTestModel;
+import com.ntscorp.SQAEduCenter.Repository.MongoTestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -27,18 +29,18 @@ public class MongoTestService {
 
     public void saveUser(String name, int age) {
 
-        MongoTestModel mongoDBTestModel = new MongoTestModel();
-        mongoDBTestModel.setName(name);
-        mongoDBTestModel.setAge(age);
+        MongoTestModel mongoTestModel = new MongoTestModel();
+        mongoTestModel.setName(name);
+        mongoTestModel.setAge(age);
 
         if (mongoTestRepository.findByName(name) != null) {
             System.out.println("[Service][update] name is already exist!!");
-            mongoDBTestModel.setId(mongoTestRepository.findByName(name).getId());
+            mongoTestModel.setId(mongoTestRepository.findByName(name).getId());
         } else {
             System.out.println("[Service][insert] New name received!!");
         }
 
-        mongoTestRepository.save(mongoDBTestModel);
+        mongoTestRepository.save(mongoTestModel);
     }
 
 }

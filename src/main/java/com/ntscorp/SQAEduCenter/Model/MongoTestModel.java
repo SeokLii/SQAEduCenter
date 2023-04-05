@@ -1,4 +1,4 @@
-package com.ntscorp.SQAEduCenter;
+package com.ntscorp.SQAEduCenter.Model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
